@@ -43,5 +43,25 @@ const bookStore = {
     ]
 }
 
-// Write your code here!
+books.forEach(book => {
+   const header = document.querySelector('h1');
+     header.textContent = "Flatiron Bookstore";
 
+ const bookContainer = document.createElement('div');
+  bookContainer.className = 'book-card';
+
+ const bookTitle = document.createElement('h2');
+  bookTitle.textContent = 'book.title';
+
+ const bookAuthor = document.createElement('p');
+  bookAuthor.textContent = 'By: {book.author}';
+
+ const bookImage = document.createElement('img');
+  bookImage.src = 'book.imageURL';
+  bookImage.alt = 'book.title';
+
+ bookContainer.append(bookTitle, bookImage, bookAuthor);
+
+ const mainList = document.querySelector('#book-list'); 
+  mainList.appendChild(bookContainer);
+});
