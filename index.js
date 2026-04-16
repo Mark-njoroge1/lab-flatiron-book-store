@@ -42,7 +42,9 @@ const bookStore = {
         }
     ]
 }
-   
+ const header = document.querySelector('#header');
+ header.textContent = "Flatbooks technical Books";
+  
  const placeholder = document.querySelector('#delete-this');
  if (placeholder){
     placeholder.remove();
@@ -55,7 +57,7 @@ books.forEach(book => {
     li.innerHTML = `
         <h3>${book.title}</h3>
         <p>${book.author}</p>
-        <img src="${book.imageURL}" />
+        <img src="${book.imageURL}" alt="${book.title}" />
     `;
     booklist.appendChild(li);
 });
