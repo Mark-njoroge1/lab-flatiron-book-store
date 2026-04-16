@@ -43,21 +43,21 @@ const bookStore = {
     ]
 }
  const header = document.querySelector('#header');
- header.textContent = "Flatbooks technical Books";
-  
+ header.textContent = "Flatbooks Technical Books";
+
  const placeholder = document.querySelector('#delete-this');
  if (placeholder){
     placeholder.remove();
 }
  
-const booklist = document.querySelector('#book-list');
+const bookList = document.querySelector('#book-list');
 
 books.forEach(book => {
    const li = document.createElement('li');
     li.innerHTML = `
         <h3>${book.title}</h3>
         <p>${book.author}</p>
-        <img src="${book.imageURL}" alt="${book.title}" />
+        <img src="${book.imageURL}" />
     `;
     booklist.appendChild(li);
 });
