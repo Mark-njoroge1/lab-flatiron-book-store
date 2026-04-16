@@ -42,29 +42,21 @@ const bookStore = {
         }
     ]
 }
+   
+ const placeholder = document.querySelector('#delete-this');
+ if (placeholder){
+    placeholder.remove();
+}
+ 
+const booklist = document.querySelector('#book-list');
 
 books.forEach(book => {
-   const header = document.querySelector('#header');
-     header.textContent = "Flatiron Technical Books";
-
- const bookContainer = document.createElement('div');
-  bookContainer.className = 'book-card';
-
- const bookTitle = document.createElement('h2');
-  bookTitle.textContent = 'book.title';
-
- const bookAuthor = document.createElement('p');
-  bookAuthor.textContent = 'By: {book.author}';
-
- const bookImage = document.createElement('img');
-  bookImage.src = 'book.imageURL';
-  bookImage.alt = 'book.title';
-
- bookContainer.append(bookTitle, bookImage, bookAuthor);
-
- const mainList = document.querySelector('#book-list'); 
-  mainList.appendChild(bookContainer);
-
- const placeholder = document.querySelector('#delete-this');
- if (placeholder) placeholder.remove();
+   const li = document.createElement('li');
+    li.innerHTML = `
+        <h3>${book.title}</h3>
+        <p>${book.author}</p>
+        <img src="${book.imageURL}" />
+    `;
+    booklist.appendChild(li);
 });
+ 
