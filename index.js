@@ -46,9 +46,8 @@ const bookStore = {
  header.textContent = "Flatbooks Technical Books";
 
  const placeholder = document.querySelector('#delete-this');
- if (placeholder){
-    placeholder.remove();
-}
+ if (placeholder) placeholder.remove();
+
  
 const bookList = document.querySelector('#book-list');
 
