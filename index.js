@@ -44,8 +44,8 @@ const bookStore = {
 }
 
 books.forEach(book => {
-   const header = document.querySelector('h1');
-     header.textContent = "Flatiron Bookstore";
+   const header = document.querySelector('#header');
+     header.textContent = "Flatiron Technical Books";
 
  const bookContainer = document.createElement('div');
   bookContainer.className = 'book-card';
@@ -64,4 +64,7 @@ books.forEach(book => {
 
  const mainList = document.querySelector('#book-list'); 
   mainList.appendChild(bookContainer);
+
+ const placeholder = document.querySelector('#delete-this');
+ if (placeholder) placeholder.remove();
 });
