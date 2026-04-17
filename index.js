@@ -60,4 +60,12 @@ books.forEach(book => {
     `;
     booklist.appendChild(li);
 });
+const books = [
+    {
+        title: "Eloquent Javascript: AMordern Introduction to Programming",
+        author: "Marjin Haverbeke",
+        img: "https://images-na.ssl-images-amazon.com/..."
+    },
+];
+
  
